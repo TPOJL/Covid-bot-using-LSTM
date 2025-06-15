@@ -33,10 +33,10 @@ The splitting was done using train_test_split from scikit-learn, ensuring that b
 The dataset consists of textual question–answer pairs about COVID-19. All entries were tokenized using nltk.word_tokenize, lowercased, and stripped of punctuation. A vocabulary was built based on all answers in the dataset, with rare words (frequency ≤10) excluded.
 
 Special tokens were used:
--	<bos> (beginning of sequence)
--	<eos> (end of sequence)
--	<pad> (for padding)
--	<unk> (unknown words)
+-	\<bos\> (beginning of sequence)
+-	\<eos\> (end of sequence)
+-	\<pad\> (for padding)
+-	\<unk\> (unknown words)
 
 Each question and answer was converted into sequences of token IDs based on word2ind. Padding was applied dynamically in the collate_fn_with_padding function for batching. Maximum lengths were capped at:
 -	Question: 256 tokens
